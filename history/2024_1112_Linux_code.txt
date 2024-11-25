@@ -1,0 +1,656 @@
+    1  ip a s
+    2  ping -c 4 8.8.8.8
+    3  ping -c 4 www.facebook.com
+    4  sudo apt update
+    5  sudo apt list --upgradable
+    6  uname -a
+    7  sudo apt upgrade
+    8  uname -a
+    9  exit
+   10  sudo poweroff
+   11  sudo apt searach openssh
+   12  amy8610620
+   13  amylai
+   14  sudo apt search openssh
+   15  sudo apt install openssh-server
+   16  sudo apt update
+   17  ll
+   18  sudo poweroff
+   19  sudo apt update
+   20  sudo apt list --upgradable
+   21  sudo apt upgrade
+   22  sudo apt update
+   23  sudo apt list --upgradable
+   24  pwd
+   25  pwd --help
+   26  echo "Hello World"
+   27  man echo
+   28  ls
+   29  ls --help
+   30  ls -a
+   31  ls
+   32  ls -al
+   33  ll
+   34  nano .bashrc
+   35  ls --help
+   36  man echo
+   37  ll
+   38  ll /var/run/
+   39  ll
+   40  touch test
+   41  ll
+   42  cat test
+   43  echo "Testing" > test
+   44  ll
+   45  cat test
+   46  chmod 000 test
+   47  ll
+   48  cat test
+   49  rm test
+   50  ll
+   51  touch test
+   52  chmod 000 text
+   53  ll
+   54  chmod 000 test
+   55  ll
+   56  chmod 553 test
+   57  ll
+   58  chmod -x test
+   59  ll
+   60  ll /
+   61  ll
+   62  echo "Testing"
+   63  echo Testing
+   64  echo Hello World
+   65  echo Hello \ World
+   66  echo 'Hello \ World'
+   67  echo Hello \ World"
+   68  echo "Hello \ World"
+   69  '
+   70  "
+   71  echo "Hello \ World"
+   72  ll
+   73  chmod 642 test
+   74  ll
+   75  chmod -200 test
+   76  ll
+   77  chmod +200 test
+   78  ll
+   79  echo "Testing" > test
+   80  ll
+   81  chown root:root test
+   82  sudo chown root:root test
+   83  ll
+   84  ll /
+   85  ll -h /
+   86  free -h
+   87  ll ~/
+   88  cd .ssh
+   89  pwd
+   90  cd
+   91  ll /
+   92  ll /proc
+   93  ll /home
+   94  ll /root
+   95  sudo ll /root
+   96  sudo ls -alF /root
+   97  pwd
+   98  ll
+   99  ls -alF .
+  100  ls -alF
+  101  ls -alF .cd .local
+  102  cd .local
+  103  pwd
+  104  ll share/
+  105  pwd
+  106  cd
+  107  ll
+  108  ll .local
+  109  ll .local/share/
+  110  ll .local/share/nano/
+  111  sudo apt update
+  112  sudo apt install tree
+  113  tree .
+  114  tree -a .
+  115  cd /
+  116  pwd
+  117  tree -a /home/amylai
+  118  tree -a ~/
+  119  cd
+  120  cd .ssh
+  121  pwd
+  122  cd
+  123  cd /.ssh
+  124  cd /tmp
+  125  pwd
+  126  cd
+  127  cd /usr/local
+  128  pwd
+  129  cd ..
+  130  pwd
+  131  cd /usr/local
+  132  cd ../games/
+  133  pwd
+  134  cd ~/.ssh
+  135  pwd
+  136  cd
+  137  uname -a
+  138  whoami
+  139  id
+  140  date
+  141  uptime
+  142  hostname
+  143  nproc
+  144  free -h
+  145  df
+  146  df -h
+  147  du
+  148  sudo du --max-depth=1 / 
+  149  sudo du -h --max-depth=1 / 
+  150  sudo fdisk -l
+  151  env
+  152  timedatectl
+  153  timedatectl list-timezones
+  154  timedatectl list-timezones > timezone
+  155  ll
+  156  cat timezone 
+  157  less timezone 
+  158  hesd timezone 
+  159  head timezone 
+  160  tail timezone 
+  161  tail-5 timezone 
+  162  tail -5 timezone 
+  163  cat timezone | grep Taipei
+  164  cat timezone | grep  -n Taipei
+  165  cat timezone | grep  -n taipei
+  166  cat timezone | grep  -n -i taipei
+  167  timedatectl
+  168  sudo timedatectl set-timezone Asia/Taipei
+  169  timedatectl
+  170  sudo timedatectl set-timezone Etc/UTC
+  171  timedatectl
+  172  sudo -i
+  173  logout
+  174  ll
+  175  mkdir test1
+  176  ll
+  177  cd test1/
+  178  pwd
+  179  mkdir ~/test2
+  180  ll
+  181  ll ~/
+  182  cd ~/test2
+  183  mkdir ./test3
+  184  ll
+  185  cd
+  186  mkdir -p test4/test5
+  187  ll
+  188  ll test4
+  189  tree.
+  190  tree .
+  191  cd
+  192  rmdir test1
+  193  tree .
+  194  rmdir ~/test2/test3
+  195  tree .
+  196  rmdir -p test4/test5/
+  197  tree .
+  198  toutch test2/test6.txt
+  199  touch test2/test6.txt
+  200  tree .
+  201  rmdir test2
+  202  rm --help
+  203  rm -rf ./test2
+  204  tree .
+  205  sudo poweroff
+  206  sudo apt update
+  207  sudo apt list --upgradable
+  208  sudo apt upgrade
+  209  ls --help
+  210  ll
+  211  cd
+  212  touch test7.txt
+  213  ll
+  214  echo "This is test for cp command." > test7.txt 
+  215  ll
+  216  cat test7.txt 
+  217  cp ~/test7.txt test.txt
+  218  ll
+  219  cat test
+  220  cat test.txt
+  221  mkdir TempFiles
+  222  ll
+  223  tree.
+  224  tree .
+  225  tree -a .
+  226  cp test7.txt TempFlies/
+  227  cp test7.txt TempFlies
+  228  tree -a .
+  229  cp test7.txt TempFiles/
+  230  tree -a .
+  231  rm TempFlies
+  232  tree -a .
+  233  mv test7.txt test9.txt
+  234  ll
+  235  mv test.txt test8.txt
+  236  ll
+  237  mkdir test10
+  238  ll
+  239  mv test9.txt test10/
+  240  ll
+  241  tree -a .
+  242  mv test10 ~/TempFiles/
+  243  tree -a .
+  244  ll
+  245  cd
+  246  cp test8.txt tset8-2.txt
+  247  ll
+  248  cp --preserve=timestamp test8.txt tset8-3.txt
+  249  ll
+  250  mv test* ~/TempFiles/
+  251  ll
+  252  cp test8.txt test8-2.txt
+  253  mv TempFiles/test8.txt
+  254  mv ~/TempFiles/test8.txt ~/
+  255  ll
+  256  cp test8.txt test8-2.txt
+  257  cp --preserve=timestamp test8.txt test8-3.txt
+  258  rm tset8-2.txt
+  259  rm tset8-3.txt
+  260  ll
+  261  mv test* ~/TempFiles/
+  262  ll
+  263  cd
+  264  ll
+  265  echo $?
+  266  ls --help
+  267  ls -e
+  268  echo $?
+  269  /dev/null
+  270  echo $?
+  271  cd /dev/null
+  272  echo $?
+  273  true
+  274  echo $?
+  275  false
+  276  echo $?
+  277  nano test-ping.sh
+  278  ll
+  279  cat test-ping.sh 
+  280  chmod +100 test-ping.sh 
+  281  ll
+  282  test-ping.sh
+  283  echo $PATH
+  284  /home/amylai/test-ping.sh 
+  285  chmod +100 timezone 
+  286  ll
+  287  chmod -100 timezone 
+  288  ll
+  289  nano test-ping.sh 
+  290  /home/amylai/test-ping.sh 
+  291  nano test-ping.sh 
+  292  /home/amylai/test-ping.sh 
+  293  cd
+  294  nano test-ping.sh 
+  295  nano
+  296  Vim
+  297  sudo Vim
+  298  Vi
+  299  nano
+  300  vim
+  301  du -h --max-depth=1 /proc
+  302  du -h --max-depth=1 /proc > du_proc.txt 2> du_proc-Error.txt
+  303  ll
+  304  cat du_proc.txt
+  305  cat du_proc-Error.txt 
+  306  du -h --max-depth=1 /proc > du_proc-All.txt 2>&1
+  307  ll
+  308  cat du_proc-All.txt
+  309  grep "fdinfo" < du_proc-All.txt
+  310  grep "fdinfo" du_proc-All.txt
+  311  cat > output.txt << EOF
+  312  This is line 1
+  313  Another line
+  314  Finally 3rd line
+  315  EOF
+  316  ll
+  317  cat output.txt 
+  318  cat <<- EOF
+  319  	This is line 
+  320  		Another line
+  321  			Finally 3rd line
+  322  EOF
+  323  cd
+  324  man apt > apt-man.txt
+  325  cat apt-man.txt 
+  326  head apt-man.txt 
+  327  tail apt-man.txt 
+  328  head -5 apt-man.txt 
+  329  tail -2 apt-man.txt 
+  330  wc apt-man.txt 
+  331  cat -n apt-man.txt 
+  332  wc apt-man.txt 
+  333  wc -l apt-man.txt 
+  334  echo "測試" > test11.txt
+  335  ll
+  336  wc test11.txt
+  337  test11.txt | wc
+  338  ll
+  339  wc test11.txt
+  340  test11.txt | wc
+  341  test11.txt|wc
+  342  echo -e "Tony Stark\nSteve Rogers\nThor\nNatasha Romanoff\nClint Barton\nBruce Banner\nSteve Rogers\nNatasha Romanoff\nThor\nThor\nClint Barton\nTony Stark\nNatasha Romanoff\nBruce Banner\nTony Stark\nClint Barton\nBruce Banner\nSteve Rogers" > Avengers.txt 
+  343  cat Avengers.txt 
+  344  wc -l Avengers.txt 
+  345  sort Avengers.txt 
+  346  uniq Avengers.txt 
+  347  uniq Avengers.txt | wc -l
+  348  test11.txt | wc
+  349  cat Avengers.txt 
+  350  sort Avengers.txt | uniq
+  351  echo -e "9\n100\42\n1" > number.txt
+  352  cat number.txt 
+  353  echo -e "9\n100\n42\n1" > number.txt
+  354  cat number.txt 
+  355  sort number.txt 
+  356  sort -n number.txt 
+  357  ll
+  358  ll | cut -c 1-10,14-20
+  359  ll | cut -d' ' -f 1,3,4
+  360  echo "Hello, World!" | tr 'o' 'O'
+  361  echo "Hello, World!" | tr -d 'l'
+  362  echo "Hello,      World!" | tr -s ' '
+  363  echo "abcde" | tr 'abc' 'xyz'
+  364  echo "Hello, World!" | tr 'a-z' 'A-Z'
+  365  echo "Hello, World!" | tr [:lower] [:upper]
+  366  echo "Hello, World!" | tr [:lower:] [:upper:]
+  367  echo "Hello,      World!" | tr -s 'l'
+  368  ll
+  369  grep 'fdinfo' du_proc-All.txt
+  370  grep -B3 'fdinfo' du_proc-All.txt
+  371  grep --help
+  372  grep -n 'fdinfo' du_proc-All.txt
+  373  grep -n -B3 'fdinfo' du_proc-All.txt
+  374  grep -n -A3 'fdinfo' du_proc-All.txt
+  375  grep -n -C3 'fdinfo' du_proc-All.txt
+  376  grep -n -A3 'changes' apt-man.txt 
+  377  grep -n -B3 'changes' apt-man.txt 
+  378  grep -n -C3 'changes' apt-man.txt 
+  379  grep 'steve' Avengers.txt 
+  380  grep 'Steve' Avengers.txt 
+  381  grep -i 'steve' Avengers.txt 
+  382  grep 'star' Avengers.txt 
+  383  grep 'Star' Avengers.txt 
+  384  grep -w 'Star' Avengers.txt 
+  385  ll
+  386  grep -r "Steve" /home/amylai/
+  387  grep -rn "Steve" /home/amylai/
+  388  grep '^S' Avengers.txt 
+  389  grep '^R' Avengers.txt 
+  390  grep '^[^S]' Avengers.txt 
+  391  grep '[^S]' Avengers.txt 
+  392  grep 'k$' Avengers.txt 
+  393  grep '^[k$]' Avengers.txt 
+  394  grep '[^k$]' Avengers.txt 
+  395  grep '[^k]$' Avengers.txt 
+  396  grep -v 'k$' Avengers.txt 
+  397  ll /etc/ | grep su
+  398  ll /etc/ | grep '^su'
+  399  ll /etc/ | grep "^su"
+  400  ls /etc/ | grep "^su"
+  401  ls /etc/ | grep ^su
+  402  ls /etc/ | grep '^su'
+  403  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9
+  404  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9 
+  405  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9 | grep "^su"
+  406  sort Avengers.txt 
+  407  sort Avengers.txt | uniq
+  408  sort Avengers.txt | uniq | grep -E 'man+'
+  409  sort Avengers.txt | uniq | grep -E '[man]+'
+  410  sort Avengers.txt | uniq | grep -E '[a]+'
+  411  sort Avengers.txt | uniq | grep -E '[a]*'
+  412  sort Avengers.txt | uniq | grep -E '[a]?'
+  413  sort Avengers.txt | uniq | grep -E '[n]?'
+  414  var1="Ba"
+  415  echo $var1
+  416  grep "Ba" Avengers.txt 
+  417  grep "$var1" Avengers.txt 
+  418  grep '$var1' Avengers.txt 
+  419  date
+  420  echo $(date)
+  421  var2=$(date)
+  422  echo $var2
+  423  echo ${var1}
+  424  echo $var1
+  425  echo $(date)
+  426  echo '$(date)'
+  427  grep "$var1" Avengers.txt 
+  428  grep "$var1","$var2" Avengers.txt 
+  429  grep "$var1,$var2" Avengers.txt 
+  430  grep -E 'Banner|Stark' Avengers.txt 
+  431  grep -e 'Banner' -e 'Stark' Avengers.txt 
+  432  grep 'Banner\|Stark' Avengers.txt 
+  433  echo "The current date is $(date)."
+  434  name=Loki
+  435  echo "$name"
+  436  echo "${name}s"
+  437  printf "Hello\nWorld\n"
+  438  cat du_proc-All.txt 
+  439  cp --preserve=timestamp du_proc-All.txt du_proc-All_original.txt 
+  440  ll
+  441  sed -i 's/denied/granted' du_proc-All.txt
+  442  sed -i 's/denied/granted/g' du_proc-All.txt
+  443  tree -a /etc/apt/sources*
+  444  cat /etc/apt/sources.list.d/ubuntu.sources
+  445  sudo cp --preserve=timestamp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources_origin
+  446  tree -a /etc/apt/sources*
+  447  ll /etc/apt/sources*
+  448  sed -i 's//proc/CPU/g' du_proc-All.txt
+  449  sed -i 's/\/proc/CPU/g' du_proc-All.txt
+  450  cat du_proc-All.txt
+  451  grep 'read dircetory' du_proc-All.txt
+  452  cat grep 'read dircetory' du_proc-All.txt
+  453  grep 'read dircetory' du_proc-All.txt > du_proc-read_dircetory.txt
+  454  cat du_proc-read_dircetory.txt 
+  455  ll
+  456  grep 'read dircetory' du_proc-All.txt > du_proc-read_dircetory.txt
+  457  grep 'read directory' du_proc-All.txt > du_proc-read_dircetory.txt
+  458  ll
+  459  cat du_proc-read_dircetory.txt 
+  460  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $4 "\t" $5 "\t" $NF}' 
+  461  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $(NF-1) "/t" $NF}' 
+  462  ll
+  463  ll | awk -F' ''{print $NF "\t" $3}'
+  464  ll | awk -F' ' '{print $NF "\t" $3}'
+  465  ll | awk -F' ' '{print $NF "\t" $3}' | column -t
+  466  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $4 "\t" $5 "\t" $NF}' | column -t
+  467  echo $PATH
+  468  echo $IFS
+  469  old_IFS=$IFS
+  470  IFS=:
+  471  echo $PATH
+  472  IFS=$old_IFS
+  473  echo $PATH
+  474  cat .bashrc | grep HIST
+  475  ll
+  476  history --help
+  477  history ! 412
+  478  history date
+  479  history tree -a /etc/apt/sources*
+  480  history
+  481  history -d 470
+  482  history
+  483  history | grep column
+  484  which ls
+  485  ll /usr/bin/
+  486  whereis ls
+  487  find /home -name "test-ping.sh"
+  488  find /home -name "test-ping.*"
+  489  find /home -name "test*"
+  490  find /home -name "test?"
+  491  find /home/amylai -type f -mmin 30
+  492  ll
+  493  ls -alFrt
+  494  find /home/amylai -type f -mmin 60
+  495  find /home/amylai -type f -mmin -60
+  496  stat test-ping.sh
+  497  ll
+  498  mv *.txt TempFiles/
+  499  ll
+  500  mv timezone TempFiles/
+  501  ll
+  502  ll TempFiles/
+  503  sudo chown amylai:amylai ~/TempFiles/test
+  504  ll TempFiles/
+  505  tar -zcvf 2024_1110_1522_TempFile2.tar.gz ./TempFiles/
+  506  tar -zcvf 2024_1110_1528_TempFile1.tar.gz /home/amylai/TempFiles/
+  507  ;;
+  508  ll
+  509  tar -tvf 2024_1110_1528_TempFile1.tar.gz 
+  510  tar -tvf 2024_1110_1522_TempFile2.tar.gz 
+  511  mkdir test10
+  512  ll
+  513  ll test10/
+  514  tar -zxvf 2024_1110_1528_TempFile1.tar.gz -C ~/test10/
+  515  ll test10/
+  516  ll test10/ home/
+  517  tree ./test10
+  518  tar -zxvf 2024_1110_1522_TempFile2.tar.gz -C ~/test10/
+  519  tree ./test10
+  520  cd
+  521  ll
+  522  gzip -9 < 2024_1110_1528_TempFile1.tar.gz > 2024_1110_1549_TempFile1_2nd.tgz
+  523  ll
+  524  tar -tvf 2024_1110_1549_TempFile1_2nd.tgz 
+  525  mkdir test11
+  526  ll
+  527  mv  2024_1110_1549_TempFile1_2nd.tgz test11
+  528  ll test11
+  529  cd test11
+  530  cp 2024_1110_1549_TempFile1_2nd.tgz 2024_1110_1549_TempFile1_2nd-2.tgz
+  531  gzip --help
+  532  wget --user-agent="Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko" https://freefilesync.org/download/FreeFileSync_12.5_Linux.tar.gz 
+  533  ll
+  534  curl https://www.cyberciti.biz/files/sticker/sticker_book.pdf -o output.pdf -o output.pdf
+  535  ll
+  536  curl -X POST -H "Authorization: Bearer OzMymlDZRcdqREwBwjGcYQ0rNGvF5kDyOsm78ihiv82" -F "message=Hello!" https://notify-api.line.me/api/notify 
+  537  curl -X POST -H "Authorization: Bearer wzJsCxE2fCD8GyDYRWhoREd7g7adcfB5AjUF1UqaEpL" -F "message=Hi！！" https://notify-api.line.me/api/notify 
+  538  ll
+  539  cp FreeFileSync_12.5_Linux.tar.gz.bak
+  540  ll
+  541  cp FreeFileSync_12.5_Linux.tar.gz FreeFileSync_12.5_Linux.tar.gz.bak
+  542  ll
+  543  gunzip FreeFileSync_12.5_Linux.tar.gz 
+  544  ll
+  545  tar -tvf FreeFileSync_12.5_Linux.tar 
+  546  ll
+  547  cd
+  548  ps 
+  549  ps aux
+  550  ps -ef
+  551  pstree
+  552  top
+  553  htop
+  554  hiotory
+  555  history
+  556  history > 2024_1110_Linux_code.txt
+  557  sudo poweroff
+  558  ll
+  559  htop
+  560  ll
+  561  htop
+  562  sudo poweroff
+  563  sudo apt update
+  564  sudo apt list --upgradable
+  565  sudo apt upgrade
+  566  htop
+  567  ll
+  568  nano -test-ping.sh
+  569  nano test-ping.sh
+  570  /home/amylai/test-ping.sh &
+  571  nano test-ping.sh
+  572  /home/amylai/test-ping.sh &
+  573  nano test-ping.sh
+  574  /home/amylai/test-ping.sh &
+  575  jobs
+  576  /home/amylai/test-ping.sh
+  577  kill 2262
+  578  nano /home/amylai/test-ping.sh
+  579  /home/amylai/test-ping.sh
+  580  /home/amylai/test-ping.sh &
+  581  kill 2812
+  582  /home/amylai/test-ping.sh &
+  583  kill 2831
+  584  jobs
+  585  sleep 500
+  586  jobs
+  587  fg
+  588  bg
+  589  fg
+  590  bg
+  591  fg
+  592  bg
+  593  fg
+  594  bg
+  595  sleep 1000
+  596  sleep 2000
+  597  jobs
+  598  fg 1
+  599  jobs
+  600  cd
+  601  echo $PATH
+  602  cd
+  603  mkdir bin
+  604  ll
+  605  echo $PATH
+  606  ll
+  607  exit
+  608  echo $PATH
+  609  ll
+  610  mv test-ping.sh ./bin/
+  611  ll
+  612  ll ~/bin
+  613  cat .profile
+  614  echo $PATH
+  615  exit
+  616  htop
+  617  ps -ef | grep "test-ping" | awk '{print $2}'
+  618  htop
+  619  ps -ef | grep "test-ping"
+  620  htop
+  621  ps -ef | grep "test-ping" | '{print $2}'
+  622  ps -ef | grep "test-ping" | awk '{print $2}'
+  623  htop
+  624  kill -15 $(ps -ef | grep "test-ping" | awk '{print $1}')
+  625  job
+  626  jobS
+  627  jobs
+  628  htop
+  629  exit
+  630  echo $PATH
+  631  nano ~/bin/test-exec.sh
+  632  ll ~/bin
+  633  chmod +100 ~/bin/test-exec.sh 
+  634  ll ~/bin
+  635  var1="BDSE-001"
+  636  echo $var1
+  637  test-exec.sh 
+  638  cat ~/bin/test-exec.sh 
+  639  echo "在 test-exec.sh 內，變數var1是：$var1"
+  640  ./bin/test-exec.sh 
+  641  bash ~/bin/test-exec.sh
+  642  source test-exec.sh
+  643  . test-exec.sh
+  644  htop
+  645  nano ~/bin/test-exec.sh
+  646  . test-exec.sh
+  647  bash ~/bin/test-exec.sh
+  648  export var1="BDSE-101"
+  649  echo $var1
+  650  test-exec.sh 
+  651  ./bin/test-exec.sh 
+  652  bash ~/bin/test-exec.sh
+  653  source test-exec.sh
+  654  . test-exec.sh
+  655  history
+  656  history > 2024_1112_Linux_code.txt

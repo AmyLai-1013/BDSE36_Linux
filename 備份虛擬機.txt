@@ -1,0 +1,5 @@
+cd C:\Program Files (x86)\VMware\VMware Workstation\OVFTool
+
+ovftool.exe --chunkSize=2gb "C:\Users\student\Documents\Virtual Machines\Ubuntu_64-bit_121\Ubuntu_64-bit_121.vmx" "C:\Share\BDSE_Linux\Ubuntu\Ubuntu_64-bit_121.ovf"
+
+C:\Users\student\Documents\Virtual Machines\Ubuntu_64-bit_121\Ubuntu_64-bit_121.vmx

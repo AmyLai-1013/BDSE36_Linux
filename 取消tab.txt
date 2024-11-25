@@ -1,0 +1,5 @@
+cat <<- EOF
+	This is line 
+		Another line
+			Finally 3rd line
+EOF
