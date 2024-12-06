@@ -1,0 +1,1002 @@
+  240  ll
+  241  tree -a .
+  242  mv test10 ~/TempFiles/
+  243  tree -a .
+  244  ll
+  245  cd
+  246  cp test8.txt tset8-2.txt
+  247  ll
+  248  cp --preserve=timestamp test8.txt tset8-3.txt
+  249  ll
+  250  mv test* ~/TempFiles/
+  251  ll
+  252  cp test8.txt test8-2.txt
+  253  mv TempFiles/test8.txt
+  254  mv ~/TempFiles/test8.txt ~/
+  255  ll
+  256  cp test8.txt test8-2.txt
+  257  cp --preserve=timestamp test8.txt test8-3.txt
+  258  rm tset8-2.txt
+  259  rm tset8-3.txt
+  260  ll
+  261  mv test* ~/TempFiles/
+  262  ll
+  263  cd
+  264  ll
+  265  echo $?
+  266  ls --help
+  267  ls -e
+  268  echo $?
+  269  /dev/null
+  270  echo $?
+  271  cd /dev/null
+  272  echo $?
+  273  true
+  274  echo $?
+  275  false
+  276  echo $?
+  277  nano test-ping.sh
+  278  ll
+  279  cat test-ping.sh 
+  280  chmod +100 test-ping.sh 
+  281  ll
+  282  test-ping.sh
+  283  echo $PATH
+  284  /home/amylai/test-ping.sh 
+  285  chmod +100 timezone 
+  286  ll
+  287  chmod -100 timezone 
+  288  ll
+  289  nano test-ping.sh 
+  290  /home/amylai/test-ping.sh 
+  291  nano test-ping.sh 
+  292  /home/amylai/test-ping.sh 
+  293  cd
+  294  nano test-ping.sh 
+  295  nano
+  296  Vim
+  297  sudo Vim
+  298  Vi
+  299  nano
+  300  vim
+  301  du -h --max-depth=1 /proc
+  302  du -h --max-depth=1 /proc > du_proc.txt 2> du_proc-Error.txt
+  303  ll
+  304  cat du_proc.txt
+  305  cat du_proc-Error.txt 
+  306  du -h --max-depth=1 /proc > du_proc-All.txt 2>&1
+  307  ll
+  308  cat du_proc-All.txt
+  309  grep "fdinfo" < du_proc-All.txt
+  310  grep "fdinfo" du_proc-All.txt
+  311  cat > output.txt << EOF
+  312  This is line 1
+  313  Another line
+  314  Finally 3rd line
+  315  EOF
+  316  ll
+  317  cat output.txt 
+  318  cat <<- EOF
+  319  	This is line 
+  320  		Another line
+  321  			Finally 3rd line
+  322  EOF
+  323  cd
+  324  man apt > apt-man.txt
+  325  cat apt-man.txt 
+  326  head apt-man.txt 
+  327  tail apt-man.txt 
+  328  head -5 apt-man.txt 
+  329  tail -2 apt-man.txt 
+  330  wc apt-man.txt 
+  331  cat -n apt-man.txt 
+  332  wc apt-man.txt 
+  333  wc -l apt-man.txt 
+  334  echo "測試" > test11.txt
+  335  ll
+  336  wc test11.txt
+  337  test11.txt | wc
+  338  ll
+  339  wc test11.txt
+  340  test11.txt | wc
+  341  test11.txt|wc
+  342  echo -e "Tony Stark\nSteve Rogers\nThor\nNatasha Romanoff\nClint Barton\nBruce Banner\nSteve Rogers\nNatasha Romanoff\nThor\nThor\nClint Barton\nTony Stark\nNatasha Romanoff\nBruce Banner\nTony Stark\nClint Barton\nBruce Banner\nSteve Rogers" > Avengers.txt 
+  343  cat Avengers.txt 
+  344  wc -l Avengers.txt 
+  345  sort Avengers.txt 
+  346  uniq Avengers.txt 
+  347  uniq Avengers.txt | wc -l
+  348  test11.txt | wc
+  349  cat Avengers.txt 
+  350  sort Avengers.txt | uniq
+  351  echo -e "9\n100\42\n1" > number.txt
+  352  cat number.txt 
+  353  echo -e "9\n100\n42\n1" > number.txt
+  354  cat number.txt 
+  355  sort number.txt 
+  356  sort -n number.txt 
+  357  ll
+  358  ll | cut -c 1-10,14-20
+  359  ll | cut -d' ' -f 1,3,4
+  360  echo "Hello, World!" | tr 'o' 'O'
+  361  echo "Hello, World!" | tr -d 'l'
+  362  echo "Hello,      World!" | tr -s ' '
+  363  echo "abcde" | tr 'abc' 'xyz'
+  364  echo "Hello, World!" | tr 'a-z' 'A-Z'
+  365  echo "Hello, World!" | tr [:lower] [:upper]
+  366  echo "Hello, World!" | tr [:lower:] [:upper:]
+  367  echo "Hello,      World!" | tr -s 'l'
+  368  ll
+  369  grep 'fdinfo' du_proc-All.txt
+  370  grep -B3 'fdinfo' du_proc-All.txt
+  371  grep --help
+  372  grep -n 'fdinfo' du_proc-All.txt
+  373  grep -n -B3 'fdinfo' du_proc-All.txt
+  374  grep -n -A3 'fdinfo' du_proc-All.txt
+  375  grep -n -C3 'fdinfo' du_proc-All.txt
+  376  grep -n -A3 'changes' apt-man.txt 
+  377  grep -n -B3 'changes' apt-man.txt 
+  378  grep -n -C3 'changes' apt-man.txt 
+  379  grep 'steve' Avengers.txt 
+  380  grep 'Steve' Avengers.txt 
+  381  grep -i 'steve' Avengers.txt 
+  382  grep 'star' Avengers.txt 
+  383  grep 'Star' Avengers.txt 
+  384  grep -w 'Star' Avengers.txt 
+  385  ll
+  386  grep -r "Steve" /home/amylai/
+  387  grep -rn "Steve" /home/amylai/
+  388  grep '^S' Avengers.txt 
+  389  grep '^R' Avengers.txt 
+  390  grep '^[^S]' Avengers.txt 
+  391  grep '[^S]' Avengers.txt 
+  392  grep 'k$' Avengers.txt 
+  393  grep '^[k$]' Avengers.txt 
+  394  grep '[^k$]' Avengers.txt 
+  395  grep '[^k]$' Avengers.txt 
+  396  grep -v 'k$' Avengers.txt 
+  397  ll /etc/ | grep su
+  398  ll /etc/ | grep '^su'
+  399  ll /etc/ | grep "^su"
+  400  ls /etc/ | grep "^su"
+  401  ls /etc/ | grep ^su
+  402  ls /etc/ | grep '^su'
+  403  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9
+  404  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9 
+  405  ll /etc/ | tr -s ' ' | cut -d ' ' -f 9 | grep "^su"
+  406  sort Avengers.txt 
+  407  sort Avengers.txt | uniq
+  408  sort Avengers.txt | uniq | grep -E 'man+'
+  409  sort Avengers.txt | uniq | grep -E '[man]+'
+  410  sort Avengers.txt | uniq | grep -E '[a]+'
+  411  sort Avengers.txt | uniq | grep -E '[a]*'
+  412  sort Avengers.txt | uniq | grep -E '[a]?'
+  413  sort Avengers.txt | uniq | grep -E '[n]?'
+  414  var1="Ba"
+  415  echo $var1
+  416  grep "Ba" Avengers.txt 
+  417  grep "$var1" Avengers.txt 
+  418  grep '$var1' Avengers.txt 
+  419  date
+  420  echo $(date)
+  421  var2=$(date)
+  422  echo $var2
+  423  echo ${var1}
+  424  echo $var1
+  425  echo $(date)
+  426  echo '$(date)'
+  427  grep "$var1" Avengers.txt 
+  428  grep "$var1","$var2" Avengers.txt 
+  429  grep "$var1,$var2" Avengers.txt 
+  430  grep -E 'Banner|Stark' Avengers.txt 
+  431  grep -e 'Banner' -e 'Stark' Avengers.txt 
+  432  grep 'Banner\|Stark' Avengers.txt 
+  433  echo "The current date is $(date)."
+  434  name=Loki
+  435  echo "$name"
+  436  echo "${name}s"
+  437  printf "Hello\nWorld\n"
+  438  cat du_proc-All.txt 
+  439  cp --preserve=timestamp du_proc-All.txt du_proc-All_original.txt 
+  440  ll
+  441  sed -i 's/denied/granted' du_proc-All.txt
+  442  sed -i 's/denied/granted/g' du_proc-All.txt
+  443  tree -a /etc/apt/sources*
+  444  cat /etc/apt/sources.list.d/ubuntu.sources
+  445  sudo cp --preserve=timestamp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources_origin
+  446  tree -a /etc/apt/sources*
+  447  ll /etc/apt/sources*
+  448  sed -i 's//proc/CPU/g' du_proc-All.txt
+  449  sed -i 's/\/proc/CPU/g' du_proc-All.txt
+  450  cat du_proc-All.txt
+  451  grep 'read dircetory' du_proc-All.txt
+  452  cat grep 'read dircetory' du_proc-All.txt
+  453  grep 'read dircetory' du_proc-All.txt > du_proc-read_dircetory.txt
+  454  cat du_proc-read_dircetory.txt 
+  455  ll
+  456  grep 'read dircetory' du_proc-All.txt > du_proc-read_dircetory.txt
+  457  grep 'read directory' du_proc-All.txt > du_proc-read_dircetory.txt
+  458  ll
+  459  cat du_proc-read_dircetory.txt 
+  460  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $4 "\t" $5 "\t" $NF}' 
+  461  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $(NF-1) "/t" $NF}' 
+  462  ll
+  463  ll | awk -F' ''{print $NF "\t" $3}'
+  464  ll | awk -F' ' '{print $NF "\t" $3}'
+  465  ll | awk -F' ' '{print $NF "\t" $3}' | column -t
+  466  cat du_proc-read_dircetory.txt | awk -F'[/:]' '{print $3 "\t" $4 "\t" $5 "\t" $NF}' | column -t
+  467  echo $PATH
+  468  echo $IFS
+  469  old_IFS=$IFS
+  470  IFS=:
+  471  echo $PATH
+  472  IFS=$old_IFS
+  473  echo $PATH
+  474  cat .bashrc | grep HIST
+  475  ll
+  476  history --help
+  477  history ! 412
+  478  history date
+  479  history tree -a /etc/apt/sources*
+  480  history
+  481  history -d 470
+  482  history
+  483  history | grep column
+  484  which ls
+  485  ll /usr/bin/
+  486  whereis ls
+  487  find /home -name "test-ping.sh"
+  488  find /home -name "test-ping.*"
+  489  find /home -name "test*"
+  490  find /home -name "test?"
+  491  find /home/amylai -type f -mmin 30
+  492  ll
+  493  ls -alFrt
+  494  find /home/amylai -type f -mmin 60
+  495  find /home/amylai -type f -mmin -60
+  496  stat test-ping.sh
+  497  ll
+  498  mv *.txt TempFiles/
+  499  ll
+  500  mv timezone TempFiles/
+  501  ll
+  502  ll TempFiles/
+  503  sudo chown amylai:amylai ~/TempFiles/test
+  504  ll TempFiles/
+  505  tar -zcvf 2024_1110_1522_TempFile2.tar.gz ./TempFiles/
+  506  tar -zcvf 2024_1110_1528_TempFile1.tar.gz /home/amylai/TempFiles/
+  507  ;;
+  508  ll
+  509  tar -tvf 2024_1110_1528_TempFile1.tar.gz 
+  510  tar -tvf 2024_1110_1522_TempFile2.tar.gz 
+  511  mkdir test10
+  512  ll
+  513  ll test10/
+  514  tar -zxvf 2024_1110_1528_TempFile1.tar.gz -C ~/test10/
+  515  ll test10/
+  516  ll test10/ home/
+  517  tree ./test10
+  518  tar -zxvf 2024_1110_1522_TempFile2.tar.gz -C ~/test10/
+  519  tree ./test10
+  520  cd
+  521  ll
+  522  gzip -9 < 2024_1110_1528_TempFile1.tar.gz > 2024_1110_1549_TempFile1_2nd.tgz
+  523  ll
+  524  tar -tvf 2024_1110_1549_TempFile1_2nd.tgz 
+  525  mkdir test11
+  526  ll
+  527  mv  2024_1110_1549_TempFile1_2nd.tgz test11
+  528  ll test11
+  529  cd test11
+  530  cp 2024_1110_1549_TempFile1_2nd.tgz 2024_1110_1549_TempFile1_2nd-2.tgz
+  531  gzip --help
+  532  wget --user-agent="Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko" https://freefilesync.org/download/FreeFileSync_12.5_Linux.tar.gz 
+  533  ll
+  534  curl https://www.cyberciti.biz/files/sticker/sticker_book.pdf -o output.pdf -o output.pdf
+  535  ll
+  536  curl -X POST -H "Authorization: Bearer OzMymlDZRcdqREwBwjGcYQ0rNGvF5kDyOsm78ihiv82" -F "message=Hello!" https://notify-api.line.me/api/notify 
+  537  curl -X POST -H "Authorization: Bearer wzJsCxE2fCD8GyDYRWhoREd7g7adcfB5AjUF1UqaEpL" -F "message=Hi！！" https://notify-api.line.me/api/notify 
+  538  ll
+  539  cp FreeFileSync_12.5_Linux.tar.gz.bak
+  540  ll
+  541  cp FreeFileSync_12.5_Linux.tar.gz FreeFileSync_12.5_Linux.tar.gz.bak
+  542  ll
+  543  gunzip FreeFileSync_12.5_Linux.tar.gz 
+  544  ll
+  545  tar -tvf FreeFileSync_12.5_Linux.tar 
+  546  ll
+  547  cd
+  548  ps 
+  549  ps aux
+  550  ps -ef
+  551  pstree
+  552  top
+  553  htop
+  554  hiotory
+  555  history
+  556  history > 2024_1110_Linux_code.txt
+  557  sudo poweroff
+  558  ll
+  559  htop
+  560  ll
+  561  htop
+  562  sudo poweroff
+  563  sudo apt update
+  564  sudo apt list --upgradable
+  565  sudo apt upgrade
+  566  htop
+  567  ll
+  568  nano -test-ping.sh
+  569  nano test-ping.sh
+  570  /home/amylai/test-ping.sh &
+  571  nano test-ping.sh
+  572  /home/amylai/test-ping.sh &
+  573  nano test-ping.sh
+  574  /home/amylai/test-ping.sh &
+  575  jobs
+  576  /home/amylai/test-ping.sh
+  577  kill 2262
+  578  nano /home/amylai/test-ping.sh
+  579  /home/amylai/test-ping.sh
+  580  /home/amylai/test-ping.sh &
+  581  kill 2812
+  582  /home/amylai/test-ping.sh &
+  583  kill 2831
+  584  jobs
+  585  sleep 500
+  586  jobs
+  587  fg
+  588  bg
+  589  fg
+  590  bg
+  591  fg
+  592  bg
+  593  fg
+  594  bg
+  595  sleep 1000
+  596  sleep 2000
+  597  jobs
+  598  fg 1
+  599  jobs
+  600  cd
+  601  echo $PATH
+  602  cd
+  603  mkdir bin
+  604  ll
+  605  echo $PATH
+  606  ll
+  607  exit
+  608  echo $PATH
+  609  ll
+  610  mv test-ping.sh ./bin/
+  611  ll
+  612  ll ~/bin
+  613  cat .profile
+  614  echo $PATH
+  615  exit
+  616  htop
+  617  ps -ef | grep "test-ping" | awk '{print $2}'
+  618  htop
+  619  ps -ef | grep "test-ping"
+  620  htop
+  621  ps -ef | grep "test-ping" | '{print $2}'
+  622  ps -ef | grep "test-ping" | awk '{print $2}'
+  623  htop
+  624  kill -15 $(ps -ef | grep "test-ping" | awk '{print $1}')
+  625  job
+  626  jobS
+  627  jobs
+  628  htop
+  629  exit
+  630  ps -ef | grep bash
+  631  ps -ef
+  632  exit
+  633  echo $PATH
+  634  nano ~/bin/test-exec.sh
+  635  ll ~/bin
+  636  chmod +100 ~/bin/test-exec.sh 
+  637  ll ~/bin
+  638  var1="BDSE-001"
+  639  echo $var1
+  640  test-exec.sh 
+  641  cat ~/bin/test-exec.sh 
+  642  echo "在 test-exec.sh 內，變數var1是：$var1"
+  643  ./bin/test-exec.sh 
+  644  bash ~/bin/test-exec.sh
+  645  source test-exec.sh
+  646  . test-exec.sh
+  647  htop
+  648  nano ~/bin/test-exec.sh
+  649  . test-exec.sh
+  650  bash ~/bin/test-exec.sh
+  651  export var1="BDSE-101"
+  652  echo $var1
+  653  test-exec.sh 
+  654  ./bin/test-exec.sh 
+  655  bash ~/bin/test-exec.sh
+  656  source test-exec.sh
+  657  . test-exec.sh
+  658  history
+  659  history > 2024_1112_Linux_code.txt
+  660  ll
+  661  sudo poweroff
+  662  sudo apt update
+  663  ll
+  664  nano ~/bin/test-ping.sh
+  665  nano ~/bin/test-exec.sh
+  666  source test-exec.sh
+  667  var1="BDSE-102"
+  668  echo $var1
+  669  test-exec.sh
+  670  source test-exec.sh
+  671  export var1="BDSE-202"
+  672  echo $var1
+  673  exit
+  674  echo $var2
+  675  echo $0
+  676  echo $-
+  677  echo $PPID
+  678  echo $$
+  679  nano ~/.profile
+  680  nano ~/.bashrc
+  681  exit
+  682  echo $var1
+  683  htop
+  684  exit
+  685  echo $var1
+  686  set -a
+  687  var1="BDSE-302"
+  688  test-exec.sh
+  689  set +a
+  690  test-exec.sh
+  691  unset var1
+  692  echo $var1
+  693  nano ~/bin/test-exec.sh
+  694  test-exec.sh
+  695  source test-exec.sh
+  696  echo "PPID 是：$PPID" && echo "PID 是：$$" && test-exec.sh && echo "PPID 是：$PPID" && echo "PID 是：$$" 
+  697  echo $?
+  698  pwd; echo $PPID; echo $$; (cd ~/bin/; ll; pwd; echo $PPID; echo $$); pwd
+  699  pwd; echo $PPID; echo $$; {cd ~/bin/; ll; pwd; echo $PPID; echo $$}; pwd
+  700  x=123; echo $x; (x=456; ecoh $x); echo $x 
+  701  x=123; echo $x; (x=456; echo $x); echo $x 
+  702  echo $BASH_SUBSHELL; ( pwd; echo $BASH_SUBSHELL; (echo $BASH_SUBSHELL))
+  703  nano ~/bin/test-exec.sh
+  704  test-exec.sh
+  705  nano ~/bin/test-exec.sh
+  706  test-exec.sh
+  707  nano ~/bin/test-exec.sh
+  708  test-exec.sh
+  709  nano ~/bin/tset-fork.sh
+  710  chmod +100 ~/bin/test-fork.sh
+  711  chmod +100 ~/bin/tset-fork.sh
+  712  tset-fork.sh
+  713  nano ~/bin/test-fork.sh
+  714  chmod +100 ~/bin/test-fork.sh
+  715  test-fork.sh
+  716  rm ~/bin/tset-fork.sh
+  717  ll ~/bin/
+  718  test-fork.sh
+  719  nano ~/bin/test-pipe.sh
+  720  test-pipe.sh
+  721  nano ~/bin/test-pipe.sh
+  722  test-pipe.sh
+  723  ll ~/bin/
+  724  chmod +100 ~/bin/test-pipe.sh
+  725  test-pipe.sh
+  726  var2="Taiwan"
+  727  echo $var2
+  728  echo $0
+  729  echo $-
+  730  echo $PPID
+  731  echo $$
+  732  bash
+  733  exit
+  734  echo $perm_var1
+  735  echo $perm_var2
+  736  bash
+  737  echo $perm_var1
+  738  echo $perm_var2
+  739  sudo poweroff
+  740  history
+  741  history > 2024_1113_Linux_code.txt
+  742  sudo poweroff
+  743  history
+  744  hostnamectl
+  745  sudo cat /etc/netplan/50-cloud-init.yaml 
+  746  sudo useradd bdsetester1
+  747  su - bdsetester1 
+  748  sudo passwd bdsetester1 
+  749  su - bdsetester1 
+  750  pwd
+  751  whoami
+  752  ll
+  753  su - bdsetester1 
+  754  id
+  755  sudo useradd bdsetester2 -m -s /bin/bash
+  756  useradd --help
+  757  env
+  758  useradd --help
+  759  sudo passwd bdsetester2
+  760  su - bdsetester2
+  761  sudo useradd bdsetester3 -m -s /bin/bash -u 1500
+  762  sudo passwd bdsetester3
+  763  su - bdsetester5
+  764  sudo useradd bdsetester4 -m -s /bin/bash -u 1501 -g 1501
+  765  sudo useradd bdsetester4 -m -s /bin/bash -u 1501 -g 1500
+  766  sudo passwd bdsetester4
+  767  su - bdsetester4
+  768  sudo useradd bdsetester5 -m -s /bin/bash
+  769  sudo passwd bdsetester5
+  770  su - bdsetester5
+  771  sudo groupadd testgroup1
+  772  getent group testgroup1
+  773  id bdsetester5
+  774  sudo groupadd testgroup2 -g 1600
+  775  getent group testgroup2
+  776  sudo groupmod -g 1601 testgroup2
+  777  getent group testgroup2
+  778  id
+  779  id bdsetester5
+  780  sudo usermod -aG testgroup2 bdsetester5
+  781  id bdsetester5
+  782  sudo deluser bdsetester1
+  783  sudo deluser bdsetester2
+  784  sudo deluser bdsetester3
+  785  sudo deluser bdsetester4
+  786  getent group 
+  787  sudo delgroup bdsetester3
+  788  getent group 
+  789  last
+  790  last -s yesterday -t today
+  791  sudo -i
+  792  sudo -u bdsetester5 -i
+  793  sudo --help
+  794  su - bdsetester5 
+  795  su bdsetester5 
+  796  ll
+  797  ssh bdsetester5@192.168.38.33
+  798  ssh bdsetester5@192.168.38.71
+  799  ssh bdsetester5@192.168.38.141
+  800  ssh bdsetester5@192.168.38.181
+  801  ssh bdsetester5@192.168.38.13
+  802  ssh bdsetester5@192.168.38.133
+  803  ssh bdsetester5@192.168.38.43
+  804  ssh bdsetester5@192.168.38.101
+  805  last
+  806  ssh bdsetest5@192.168.38.141
+  807  last
+  808  ssh bdsetest5@192.168.38.33
+  809  ssh bdsetester5@192.168.38.33
+  810  last
+  811  ll ~/bin/
+  812  ll ~/bin/test-fork.sh 
+  813  cat ~/bin/test-fork.sh 
+  814  ssh bdsetester5@192.168.38.33 'ls -alF'
+  815  exut
+  816  exit
+  817  sudo apt update
+  818  sudo apt search openssh
+  819  ll
+  820  ll .ssh
+  821  cat .ssh/known_hosts
+  822  sudo apt search openssh | grep -i install
+  823  ssh-keygen -t rsa -P ""
+  824  ll .ssh
+  825  cat .ssh/id_rsa.pub 
+  826  cat .ssh/id_rsa.pub >> .ssh/authorized_keys 
+  827  ll
+  828  ll .ssh
+  829  ssh-copy-id bdsetester5@192.168.38.171
+  830  ssh bdsetester5@192.168.38.171
+  831  ll .ssh
+  832  nano .ssh/authorized_keys 
+  833  cat .ssh/authorized_keys 
+  834  history
+  835  history > 2024_1125_Linux_code.txt
+  836  sudo poweroff
+  837  history
+  838  sudo poweroff
+  839  history
+  840  history --help
+  841  sudo poweroff
+  842  history
+  843  sudo poweroff
+  844  history
+  845  sudo poweroff
+  846  sudo apt update
+  847  sudo apt upgrade
+  848  ssh ll /etc/hosts
+  849  ll /etc/hosts
+  850  cat /etc/hosts
+  851  sudo nano /etc/hosts
+  852  ssh bdsetester5@192.168.38.33
+  853  ssh bdsetester5@lu_linux_server_3
+  854  htop
+  855  server ssh status
+  856  service ssh status
+  857  systemctl status ssh
+  858  sudo nano /etc/ssh/sshd_config
+  859  nano hello.sh
+  860  which python3
+  861  nano hello.sh
+  862  chmod +x hello.sh
+  863  ~/hello.sh
+  864  echo "This is a very long \
+  865  command that spans two lines."
+  866  var=100
+  867  echo "The price is $var"
+  868  echo "The price is \$var"
+  869  echo 'The price is \$var'
+  870  echo 'The price is $var'
+  871  touch "filename with space.txt"
+  872  ll
+  873  touch filename with space.txt
+  874  ll
+  875  nano ~/bin/test-specialCharacterFileName.sh
+  876  chmod +x ~/bin/test-specialCharacterFileName.sh
+  877  test-specialCharacterFileName.sh
+  878  test-specialCharacterFileName.txt
+  879  ll
+  880  test-specialCharacterFileName.sh
+  881  nano ~/bin/test-specialCharacterFileName.sh
+  882  test-specialCharacterFileName.sh
+  883  cat hello.sh
+  884  env
+  885  declare -i numBer
+  886  numBer=3
+  887  echo "MyNumber = $numBer"
+  888  numBer=three
+  889  echo "MyNumber = $numBer"
+  890  unset numBer
+  891  echo "MyNumber = $numBer"
+  892  x=2
+  893  y=3
+  894  z=$(( x + y ))
+  895  echo $z
+  896  z=$(( x - y ))
+  897  echo $z
+  898  z=$(( x * y ))
+  899  echo $z
+  900  z=$(( x / y ))
+  901  echo $z
+  902  z=$(( x % y ))
+  903  echo $z
+  904  z=$(( x ** y ))
+  905  echo $z
+  906  a=10
+  907  a+=5
+  908  ecoh $a
+  909  echo $a
+  910  a=10
+  911  (( a += 5 ))
+  912  echo $a
+  913  a=10
+  914  echo $((++a))
+  915  echo $a
+  916  echo $((a++))
+  917  echo $a
+  918  num=42
+  919  echo $num
+  920  echo 42
+  921  echo $(( 42 + 052 + 0x2A + 2#101010 + 7#60 ))
+  922  declare -a array_a=(zero one two three four)
+  923  echo ${array_a[0]}
+  924  echo ${array_a[2]}
+  925  echo ${#array_a[2]}
+  926  echo ${#array_a[*]}
+  927  echo ${array_a[*]}
+  928  array_a[2]=Er
+  929  echo ${array_a[*]}
+  930  declare -a array_b=(1 2 3 4 5)
+  931  echo ${array_b[*]}
+  932  echo ${array_b[2]}
+  933  echo ${array_b[3]}
+  934  echo $(( array_b[2] + array_b[3] ))
+  935  echo $PATH
+  936  declare -A address
+  937  addres["Country"]="TW"
+  938  addres["City"]="NTC"
+  939  echo ${address["Country"]}
+  940  address["Country"]="TW"
+  941  address["City"]="NTC"
+  942  echo ${address["Country"]}
+  943  echo ${address["City"]}
+  944  address["City"]="Taichung"
+  945  echo ${address["City"]}
+  946  echo ${address[*]}
+  947  echo ${!address[*]}
+  948  echo ${address[@]}
+  949  echo ${!address[@]}
+  950  nano ~/bin/test-read.sh
+  951  chmod +x ~/bin/test-read.sh
+  952  ~/bin/test-read.sh
+  953  nano ~/bin/test-read.sh
+  954  nano ~/bin/test-read2.sh
+  955  chmod +x ~/bin/test-read2.sh
+  956  ~/bin/test-read2.sh
+  957  nano ~/bin/test-read2.sh
+  958  ~/bin/test-read2.sh
+  959  nano ~/bin/test-read2.sh
+  960  ll ~/bin
+  961  myCommandString="ls -alF'
+  962  myCommandString="ls -alF"
+  963  '
+  964  "
+  965  myCommandString="ls -alF"
+  966  myCommandString
+  967  echo ${myCommandString}
+  968  eval ${myCommandString}
+  969  date_yesterday3='date -d "yesterday" +%Y%m%d'
+  970  date -d "yesterday" +%Y%m%d
+  971  echo ${date_yesterday3}
+  972  eval ${date_yesterday3}
+  973  nano ~/bin/test-eval1.sh
+  974  chmod +x ~/bin/test-eval1.sh
+  975  test-eval1.sh
+  976  nano ~/bin/test-eval1.sh
+  977  sudo useradd bdse36 -m -s /bin/bash
+  978  sudo passwd bdse36
+  979  sudo usermod -aG sudo bdse36
+  980  sudo nano /etc/ssh/sshs_config
+  981  sudo nano /etc/ssh/sshd_config
+  982  sudo systemctl restart ssh
+  983  nano ~/bin/test-shift.sh
+  984  chmod +x ~/bin/test-shift.sh
+  985  test-shift.sh abc 123 def
+  986  getconf ARG_MAX
+  987  nano ~/bin/test-shift.sh
+  988  test-shift.sh 1 2 3 4 5 6 7 8 9 a b c d e f
+  989  nano ~/bin/test-shift.sh
+  990  test-shift.sh 1 2 3 4 5 6 7 8 9 a b c d e f
+  991  history
+  992  history > 2024_1126_Linux_code.txt
+  993  sudo poweroff
+  994  sudo apt update
+  995  sudo apt list --upgradable
+  996  sudo apt upgrade
+  997  ll
+  998  mkdir Linux_code
+  999  mv 2024_1110_Linux_code ~/Linux_code/
+ 1000  mv 2024_1110_Linux_code.txt ~/Linux_code/
+ 1001  mv 2024_1112_Linux_code.txt ~/Linux_code/
+ 1002  mv 2024_1113_Linux_code.txt ~/Linux_code/
+ 1003  mv 2024_1125_Linux_code.txt ~/Linux_code/
+ 1004  mv 2024_1126_Linux_code.txt ~/Linux_code/
+ 1005  ll
+ 1006  nano ~/bin/test-shift2.sh
+ 1007  chmod +x ~/bin/test-shift2.sh
+ 1008  ll ~/bin/test-shift2.sh
+ 1009  test-shift2.sh
+ 1010  test-shift2.sh a b c d e
+ 1011  nano ~/bin/test-shift3.sh
+ 1012  chmod +x ~/bin/test-shift3.sh
+ 1013  test-shift3.sh a b c d e f
+ 1014  date
+ 1015  date_time_now=$(date +%Y_%m%d_%H%M%S)
+ 1016  echo $date_time_now
+ 1017  date_yesterday=$(date -d "$date -1 day" +%Y%m%d)
+ 1018  echo $date_yesterday
+ 1019* date_of_last=$(date -d "$date %Y%m01 last day" +%Y%m%d)
+ 1020  date_yesterday2=$(date -d "yesterday" +%Y%m%d)
+ 1021  echo $date_yesterday2
+ 1022  cat ~/TempFiles/Avengers.txt 
+ 1023  grep "Clint" ~/TempFiles/Avengers.txt 
+ 1024  grep -v "Clint" ~/TempFiles/Avengers.txt 
+ 1025  [[ -f ~/TempFiles/Avengers.txt ]]
+ 1026  echo $?
+ 1027  [[ -f ~/TempFiles/Non-exist-file.txt ]]
+ 1028  echo $?
+ 1029  [[ ! -f ~/TempFiles/Non-exist-file.txt ]]
+ 1030  echo $?
+ 1031  [[ ! -f ~/TempFiles/Avengers.txt ]]
+ 1032  echo $?
+ 1033  [[ ~/TempFiles/test11.txt -nt ~/TempFiles/test14.txt ]]
+ 1034  echo $?
+ 1035  [[ ~/TempFiles/test11.txt -ot ~/TempFiles/test14.txt ]]
+ 1036  echo $?
+ 1037  ll
+ 1038  ll TempFiles/
+ 1039  [[ ~/TempFiles/test11.txt -nt ~/TempFiles/test7.txt ]]
+ 1040  echo $?
+ 1041  [[ ~/TempFiles/test11.txt -ot ~/TempFiles/test7.txt ]]
+ 1042  echo $?
+ 1043  [ "hello" = "hello" ]
+ 1044  echo $?
+ 1045  [ "hello" = "world" ]
+ 1046  echo $?
+ 1047  [ "hello" == "hello" ]
+ 1048  echo $?
+ 1049  [ "hello" != "world" ]
+ 1050  echo $?
+ 1051  [[ "hello" > "world" ]]
+ 1052  echo $?
+ 1053  [[ "apple" > "banana" ]]
+ 1054  echo $?
+ 1055  [[ "apple" < "banana" ]]
+ 1056  echo $?
+ 1057  [[ "hello" < "world" ]]
+ 1058  echo $?
+ 1059  [[ "abc123" =~ ^[a-z]+[0-9] ]]
+ 1060  echo $?
+ 1061  [[ "abc123" =~ ^[A-Z]+[0-9] ]]
+ 1062  echo $?
+ 1063  [[ "abc123" == a* ]]
+ 1064  echo $?
+ 1065  [[ "abc123" == "a*" ]]
+ 1066  echo $?
+ 1067  [[ "abc123" == b* ]]
+ 1068  echo $?
+ 1069  (( 10 != 20 ))
+ 1070  echo $?
+ 1071  (( 10 == 20 ))
+ 1072  echo $?
+ 1073  (( 10 >= 20 ))
+ 1074  echo $?
+ 1075  (( 10 <= 20 ))
+ 1076  echo $?
+ 1077  (( "10" <= "20" ))
+ 1078  echo $?
+ 1079  (( "10" >= "20" ))
+ 1080  echo $?
+ 1081  (( "-10" >= "-20" ))
+ 1082  echo $?
+ 1083  (( 42 > 7#60 ))
+ 1084  echo $?
+ 1085  (( 42 < 7#60 ))
+ 1086  echo $?
+ 1087  (( 42 == 7#60 ))
+ 1088  echo $?
+ 1089  a=10 b=20 c=5 d=2 e=3 f=4 g=6 h=8 i=9 j=7 k=11 l=13 m=15 n=17 o=19 p=21 q=23 r=25 s=27 t=29 u=31 v=33 w=35 x=37 y=39 z=41
+ 1090  echo $x
+ 1091  echo $c
+ 1092  (( a + b == c * d ))
+ 1093  echo $?
+ 1094  (( e ** f > g % h ))
+ 1095  echo $?
+ 1096  (( i * j < k * l ))
+ 1097  echo $?
+ 1098  (( m / n == o / p ))
+ 1099  echo $?
+ 1100  (( q + r > s + t ))
+ 1101  echo $?
+ 1102  (( u - v < w - x ))
+ 1103  echo $?
+ 1104  (( y * z == a * b * c * d / e / f ))
+ 1105  echo $?
+ 1106  var1=apple; var2=apple; var3=string
+ 1107  [ $var1 == $var2 -a $var3 == "string" ]
+ 1108  echo $?
+ 1109  var1=apple; var2=apple; var3=orange
+ 1110  [ $var1 == $var2 -a $var3 == "string" ]
+ 1111  echo $?
+ 1112  [ $var1 == $var2 -o $var3 == "string" ]
+ 1113  echo $?
+ 1114  var1=apple; var2=banana; var3=orange
+ 1115  var1=apple; var2=banana; var3=string
+ 1116  [ $var1 == $var2 -o $var3 == "string" ]
+ 1117  echo $?
+ 1118  [ $var1 == $var2 -a $var3 == "string" ]
+ 1119  echo $?
+ 1120  (exit 42); echo $?
+ 1121  (exit -2); echo $?
+ 1122  foo () { return 2000; }; foo; echo $?
+ 1123  nano ~/bin/test-return.sh 
+ 1124  chmod +x ~/bin/test-return.sh
+ 1125  ~/bin/test-return.sh 
+ 1126  echo $?
+ 1127  nano ~/bin/test-return.sh 
+ 1128  ~/bin/test-return.sh 
+ 1129  echo $?
+ 1130  sudo /home/amylai/bin/test-return.sh 
+ 1131  date -d "(date +%Y/%m/01)-1 day" " + %Y/%m/%d"
+ 1132  date -d "(date +%Y/%m/01)-1 day" "+%Y/%m/%d"
+ 1133  date -d "(date +%Y/%m/01)-1 day +%Y/%m/%d"
+ 1134  date -d "(date +%Y/%m/01)-1 day""+%Y/%m/%d"
+ 1135  date -d "(date +%Y/%m/01)-1 day" "+%Y/%m/%d"
+ 1136  date -d "(date +%Y/%m/01)-1 day"
+ 1137  date -d "(date +%Y/%m/01)-1 day" +%Y/%m/%d
+ 1138  date -d "$(date +%Y/%m/01)-1 day" +%Y/%m/%d
+ 1139  ll
+ 1140  if [ -d ~/TempFiles ]; then echo "Folder exists"; else echo "Folder does not exist"; fi
+ 1141  if [ -d ~/TestFiles ]; then echo "Folder exists"; else echo "Folder does not exist"; fi
+ 1142  for i in {1..10}; do echo $i; done
+ 1143  names=("Alice" "Bob" "Charlie")
+ 1144  for student_Name in "${names[@]}"; do echo "Hello, $student_Name!"; done
+ 1145  for student_Name in Alice Bob Charlie David; do echo "Hello, $student_Name!"; done
+ 1146  for file in $HOME/TempFiles/*.txt; do echo "Processing $file"; done
+ 1147  mkdir ~/TempFiles2 for file in $HOME/TempFiles/*.txt; do cp $file $HOME/TempFiles2"; done
+ 1148  mkdir ~/TempFiles2; for file in $HOME/TempFiles/*.txt; do cp $file $HOME/TempFiles2"; done
+done
+ 1149  ll
+ 1150  x=0
+ 1151  while (( $x < 5 )); do touch ~/TempFiles2/$x.txt; x=$((++x)); echo $x; done
+ 1152* 
+ 1153  while read -d $'\n' name; do echo $name; done
+ 1154  while read -d $'\n' name; do echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1155  while read -d $'\n' name; do echo $name; done < $HOME/TempFiles/Avengers.txt | sort
+ 1156  while read -d $'\n' name; do echo $name; done < $HOME/TempFiles/Avengers.txt | sort | uniq
+ 1157  while read -d $'\n' name; do echo $name; done <<< (sort $HOME/TempFiles/Avengers.txt | uniq)
+ 1158  while read -d $'\n' name; do echo $name; done <<< $(sort $HOME/TempFiles/Avengers.txt | uniq)
+ 1159  while read name; do      case $name in          "Tony Stark" ) # 用 " " 或 \ 處理空白 
+            echo "$name is Iron Man." ;;          Steve\ Rogers )              echo "$name is Capt. America." ;;          Thor )              echo "$name is the God of Thunder." ;;          * )              echo "$name is not one of the Big Three." ;;      esac ; done < $HOME/TempFiles/Avengers.txt
+ 1160  mkdir ~/TempFiles2; for file in $HOME/TempFiles/*.txt; do cp $file $HOME/TempFiles2/; done
+ 1161  ll
+ 1162  ll TempFiles2
+ 1163  while read -d $'\n' name; do echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1164  while read -d $'\n' name; do if [ "$name" == "Thor" ]; then break fi echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1165  while read -d $'\n' name; do if [ "$name" == "Thor" ]; then break fi; echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1166  while read -d $'\n' name; do if [ "$name" == "Thor" ]; then break; fi; echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1167  while read -d $'\n' name; do if [ "$name" == "Thor" ]; then continue; fi; echo $name; done < $HOME/TempFiles/Avengers.txt
+ 1168  i=10
+ 1169  until [ $i < 1 ]; do echo $i; i=$((i-1)); done
+ 1170* 
+ 1171  i=10
+ 1172  until [ $i < 1 ]; do echo $i; i=$((i-1)); done
+ 1173  cat ~/bin/test-ping.sh 
+ 1174  nano ~/bin/test-fork2.sh
+ 1175  chmod +x ~/bin/test-fork2.sh
+ 1176  ~/bin/test-fork2.sh
+ 1177  nano ~/bin/test-fork2.sh
+ 1178  ~/bin/test-fork2.sh
+ 1179  nano ~/bin/test-function.sh
+ 1180  nano ~/bin/test-function1.sh
+ 1181  chmod +x ~/bin/test-function1.sh
+ 1182  ~/bin/test-function1.sh
+ 1183  nano ~/bin/test-function2.sh
+ 1184  chmod +x ~/bin/test-function2.sh
+ 1185  test-function2.sh
+ 1186  ~/bin/test-function2.sh
+ 1187  say_hello()
+ 1188  say_hello
+ 1189  source ~/bin/test-function2.sh
+ 1190  say_hello
+ 1191  nano ~/.bashrc
+ 1192  crontab -e
+ 1193  crontab -l
+ 1194  crontab -l | grep ^[^#]
+ 1195* 
+ 1196  crontab -e
+ 1197  cat ~/cron_test_2024_1130_test01
+ 1198  cat .bashrc
+ 1199  crontab -e
+ 1200  ls -alFrt ~/TempFiles
+ 1201  cat ~/TempFiles/cron_test_profile_bashrc.txt
+ 1202  crontab -e
+ 1203  wget 46.101.230.157/sql_tutorial/2007.csv
+ 1204  ll
+ 1205  sudo apt update
+ 1206  python3 -V
+ 1207  sudo apt search python3-pip
+ 1208  sudo apt install python3-pip
+ 1209  sudo python3 -m pip install --upgrade pip
+ 1210  sudo python3 -m pip install --upgrade pip --break-system-packages
+ 1211  sudo python3 -m pip install jupyter notebook
+ 1212  sudo python3 -m pip install jupyter notebook --break-system-packages
+ 1213  jupyter notebook --generate-config
+ 1214  sudo apt install python3-venv python-dev
+ 1215  sudo apt install python3-venv python-dev-is-python3
+ 1216  mkdir python_venv
+ 1217  cd python_venv
+ 1218  python3 -v venv venv
+ 1219  source venv/bin/activate
+ 1220  python3 -m venv jupyter_env
+ 1221  ll
+ 1222  ll jupyter_env/
+ 1223  source jupyter_env/bin/activate
+ 1224  history
+ 1225  pip install jupyter notebook
+ 1226  jupyter notebook --generate-config
+ 1227  ll
+ 1228  ll jupyter_env/
+ 1229  ll ~/.jupyter/
+ 1230  nano ~/.jupyter/jupyter_notebook_config.py
+ 1231  echo "c.NotebookApp.ip = '0.0.0.0'" >> $HOME/.jupyter/jupyter_notebook_config.py
+ 1232  echo "c.NotebookApp.open_browser = False" >> $HOME/.jupyter/jupyter_notebook_config.py
+ 1233  jupyter notebook
+ 1234  jupyter notebook password
+ 1235  jupyter notebook
+ 1236  deactivate
+ 1237  cd
+ 1238  history
+ 1239  history > ~/Linux_code/2024_1130_Linux_code.txt
