@@ -8,29 +8,38 @@
 
 2.&3.
 
-mkdir LinuxHW
+mkdir LinuxHW # Linux裡建資料夾
+
+# FZ上傳test_names.txt檔(先改換行符號)
 
 cat ~/LinuxHW/test_names.txt
 
-sudo groupadd airflow -g 1700
+sudo groupadd airflow -g 1700 # 新增一個要給這些user使用的群組 自訂編號為1700
 
-getent group airflow
+getent group airflow # 檢查一下
 
-nano ~/bin/createAccount.sh
-chmod +x ~/bin/createAccount.sh
-createAccount.sh
+nano ~/bin/createAccount.sh # 開一個檔案將以下程式碼寫入
 
-
-createAccount.sh
+_______________________________________________________________________
+# createAccount.sh
 #!/bin/bash
 
 for name in $(cat $HOME/LinuxHW/test_names.txt);
 do
-        sudo useradd "$name" -m -s /bin/bash
+        sudo useradd "$name" -m -s /bin/bash 
         sudo usermod -aG airflow "$name"
         if [[ "$name" == "Alice" || "$name" == " Benny" ]];
         then
                 sudo usermod -aG sudo "$name"
         fi
 done
+_______________________________________________________________________
+
+chmod +x ~/bin/createAccount.sh # 修改檔案權限
+createAccount.sh # 執行
+
+cd /home
+ll #檢查是否有創建成功
+
+
 
